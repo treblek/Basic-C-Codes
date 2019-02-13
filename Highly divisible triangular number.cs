@@ -11,8 +11,9 @@ namespace ConsoleApp13
         static void Main(string[] args)
         {
             int sayi=0,donguDegiskeni=0,bolenSayisi=0;
-            for(int j=1;j<=10000000;j++)
+            for(int j= 1; j<=999999999;j++)
             {
+
                 sayi = j;
                 while (donguDegiskeni != sayi)
                 {
@@ -22,13 +23,15 @@ namespace ConsoleApp13
                         {
                             bolenSayisi++;
                         }
+                        if (bolenSayisi >= 500)
+                        {
+                            Console.WriteLine("{0}", sayi);
+                            Console.ReadLine();
+                        }
                     }
+                    
+                    
                     bolenSayisi = 0;
-                    if (bolenSayisi >= 500)
-                    {
-                        Console.WriteLine("{0}", sayi);
-                        Console.ReadLine();
-                    }
                     donguDegiskeni++;
                 }
             }
